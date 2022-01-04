@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  php:
+    image: php:7.4-apache
+    container_name: php-apache
+    ports:
+      - 8080:80
+    volumes:
+      - ./php/www:/var/www/html/
+      - ./web/:/var/www/html/web/
+     
+    working_dir: /var/ww/html/web
+      
+    restart: always
